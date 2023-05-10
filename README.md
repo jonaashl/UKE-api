@@ -4,7 +4,7 @@
 
 Run visual studio solution or dockercontainer from Docker Desktop
 
-Database is a local SQL database which is not accessible to the docker container. Could potentially switch to SQLite
+Database is a local SQL database which is not accessible to the docker container. Could potentially switch to SQLite but then i would need to hack the data persistence somehow idk how that works
 
 ---
 

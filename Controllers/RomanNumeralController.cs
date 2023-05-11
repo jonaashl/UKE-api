@@ -28,7 +28,7 @@ namespace UKE_api.Controllers
         }
 
         [HttpPost]
-        public IActionResult Convert([FromBody] RomanNumeralModel model)
+        public IActionResult ConvertToNumber([FromBody] RomanNumeralModel model)
         {
             string numeral = model.Numeral;
 

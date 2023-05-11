@@ -2,9 +2,8 @@
 
 ## Quickstart
 
-Run visual studio solution or dockercontainer from Docker Desktop
+Run visual studio solution or docker container (No database on docker as of now)
 
-Database is a local SQL database which is not accessible to the docker container. Could potentially switch to SQLite but then i would need to hack the data persistence somehow idk how that works
 
 ---
 
@@ -22,11 +21,15 @@ React med Oslo kommune styleguide har vært.. utfordrende
 
 ### Forbedringer
 
--   Accessibility / Semantic HTML
--   Design
--   Logikken for romertall konvertering tar ikke hensyn til om brukeren inputer et - "feilformatert" romertall.
--   Frontend build optional task. Dette skjønte jeg dessverre ikke hvordan man skulle gjøre dette
+- Flytte konverteringslogikken ut av kontrolleren slik at det ikke er én funksjon som håndterer konverteringen, database-lagring og respons.
+- Dette ville gjort applikasjonen mer modulær og fleksibel for skalering
 
+- Endre fra en lokal database til f.eks SQLite som kan kjøre i docker containeren.
+- Dette ville resultert i en fungerende docker container, men ingen data persistance - over mitt nivå.
+
+- Logikken er riktig, men tar ikke hensyn til feilformaterte romertall. (gir et output selv om det burde vært en exception)
+
+- Exception handling
 ---
 
 License: MIT
